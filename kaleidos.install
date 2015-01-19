@@ -1,6 +1,27 @@
 #!/bin/bash
+echo 'Instalando Efectos para Fractal Magick \n ejecute como sudo'
+
 apt-get install -y imagemagick
-wget 'http://www.fmwconcepts.com/imagemagick/downloadcounter.php?scriptname=kaleidoscopic&dirname=kaleidoscopic' -q -O /tmp/kaleidoscopic
-cp /tmp/kaleidoscopic /usr/local/bin/kaleidoscopic
+
+cp --force ./effects/kaleidoscopic /usr/local/bin/
+cp --force ./effects/pixelize /usr/local/bin/
+cp --force ./effects/recursion /usr/local/bin/
+cp --force ./effects/vintage2 /usr/local/bin/
+cp --force ./effects/thermography /usr/local/bin/
+cp --force ./effects/kmeans /usr/local/bin/
+cp --force ./effects/stutter /usr/local/bin/
+
 chmod 755 /usr/local/bin/kaleidoscopic
-echo 'kaleidoscopic instalado con exito'
+chmod 755 /usr/local/bin/pixelize
+chmod 755 /usr/local/bin/recursion
+chmod 755 /usr/local/bin/vintage2
+chmod 755 /usr/local/bin/thermography
+chmod 755 /usr/local/bin/kmeans
+chmod 755 /usr/local/bin/stutter
+
+echo 'Instalando Fractal Magick'
+
+cp --force ./fractalmagick /usr/local/bin/
+chmod 755 /usr/local/bin/fractalmagick
+
+echo '\n fractalmagick instalado con exito'

@@ -35,8 +35,10 @@ kaleidoscopic -m image -o 0 -i $DIR$NAME.jpg $DIR$NAME.5.jpg
 kaleidoscopic -m image -o 90 -i $DIR$NAME.0.jpg $DIR$NAME.6.jpg
 kaleidoscopic -m image -o 180 -i $DIR$NAME.1.jpg $DIR$NAME.7.jpg
 kaleidoscopic -m image -o 0 $DIR$NAME.4.jpg $DIR$NAME.8.jpg
+
 echo 'Caleidoscopio acaleidoscopeado terminado...'
 echo 'Recordar mover las imagenes que se deseen guardar a otro directorio... estas son temporales'
+
 ristretto $DIR$NAME.jpg &
 
 exit 0
