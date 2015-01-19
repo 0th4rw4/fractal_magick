@@ -28,6 +28,6 @@ Por lo tanto si tengo la foto, "fulano" conviene y se aconseja usar el nombre "f
  - Que pasa con imagenes que no son JPG?
  - Como aplicar los efectos? En que orden ?
  - Usar arrays para cargar configuraciones de los efectos, y mejorar el nombramiento de los archivos (automatisar todo un poco mas )
- - HACER COMPROBACIONES existe ristretto, kaleidoscopic, wget
+ - Hacer comprobaciones existe ristretto? kaleidoscopic? wget?
  - Mejorar instalador ?
  - Tomar deciciones con respecto a los nombres de archivos... para no pisar el mismo archivo, por un tema de coincidencia de nombre
