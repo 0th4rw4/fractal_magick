@@ -1,0 +1,42 @@
+#!/bin/bash
+DIR=/tmp/kaleidos/
+#Compruebo que la carpeta no este creada
+# El entrecomillado de $DIR es importante
+# Tambien es importante el espacion entre el if y el corchete
+if [ ! -d "$DIR" ]; then
+  mkdir $DIR
+  ln -s $DIR ~/kaleidos
+fi
+
+#Compruebo que se alla ingresado una URL
+if [ ! $1 ]; then
+  echo 'Ingrese una url para descargar'
+  read URL
+else
+  URL=$1
+fi
+
+#Compruebo que la variable no exista
+if [ ! $2 ]; then
+  echo 'Como se llamara el archivo ?'
+  read NAME
+else
+  NAME=$2
+fi
+
+wget -q -N $URL -O $DIR$NAME.jpg
+kaleidoscopic -m image -o 0 $DIR$NAME.jpg $DIR$NAME.0.jpg
+kaleidoscopic -m image -o 90 $DIR$NAME.jpg $DIR$NAME.1.jpg
+kaleidoscopic -m image -o 180 $DIR$NAME.jpg $DIR$NAME.2.jpg
+kaleidoscopic -m image -o 180 -i $DIR$NAME.jpg $DIR$NAME.3.jpg
+kaleidoscopic -m image -o 90 -i $DIR$NAME.jpg $DIR$NAME.4.jpg
+kaleidoscopic -m image -o 0 -i $DIR$NAME.jpg $DIR$NAME.5.jpg
+
+kaleidoscopic -m image -o 90 -i $DIR$NAME.0.jpg $DIR$NAME.6.jpg
+kaleidoscopic -m image -o 180 -i $DIR$NAME.1.jpg $DIR$NAME.7.jpg
+kaleidoscopic -m image -o 0 $DIR$NAME.4.jpg $DIR$NAME.8.jpg
+echo 'Caleidoscopio acaleidoscopeado terminado...'
+echo 'Recordar mover las imagenes que se deseen guardar a otro directorio... estas son temporales'
+ristretto $DIR$NAME.jpg &
+
+exit 0

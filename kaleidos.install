@@ -1,0 +1,6 @@
+#!/bin/bash
+apt-get install -y imagemagick
+wget 'http://www.fmwconcepts.com/imagemagick/downloadcounter.php?scriptname=kaleidoscopic&dirname=kaleidoscopic' -q -O /tmp/kaleidoscopic
+cp /tmp/kaleidoscopic /usr/local/bin/kaleidoscopic
+chmod 755 /usr/local/bin/kaleidoscopic
+echo 'kaleidoscopic instalado con exito'
