@@ -41,16 +41,18 @@ else
 fi
 
 wget -q -N $URL -O $DIR$NAME.jpg
-kaleidoscopic -m image -o 0 $DIR$NAME.jpg $DIR$NAME.0.jpg
-kaleidoscopic -m image -o 90 $DIR$NAME.jpg $DIR$NAME.1.jpg
-kaleidoscopic -m image -o 180 $DIR$NAME.jpg $DIR$NAME.2.jpg
-kaleidoscopic -m image -o 180 -i $DIR$NAME.jpg $DIR$NAME.3.jpg
-kaleidoscopic -m image -o 90 -i $DIR$NAME.jpg $DIR$NAME.4.jpg
-kaleidoscopic -m image -o 0 -i $DIR$NAME.jpg $DIR$NAME.5.jpg
+kaleidoscopic -m image -o 0 $DIR$NAME.jpg $DIR$NAME.00.jpg
+kaleidoscopic -m image -o 90 $DIR$NAME.jpg $DIR$NAME.01.jpg
+kaleidoscopic -m image -o 180 $DIR$NAME.jpg $DIR$NAME.02.jpg
+kaleidoscopic -m image -o 270 $DIR$NAME.jpg $DIR$NAME.03.jpg
+kaleidoscopic -m image -o 270 -i $DIR$NAME.jpg $DIR$NAME.04.jpg
+kaleidoscopic -m image -o 180 -i $DIR$NAME.jpg $DIR$NAME.05.jpg
+kaleidoscopic -m image -o 90 -i $DIR$NAME.jpg $DIR$NAME.06.jpg
+kaleidoscopic -m image -o 0 -i $DIR$NAME.jpg $DIR$NAME.07.jpg
 
-kaleidoscopic -m image -o 90 -i $DIR$NAME.0.jpg $DIR$NAME.6.jpg
-kaleidoscopic -m image -o 180 -i $DIR$NAME.1.jpg $DIR$NAME.7.jpg
-kaleidoscopic -m image -o 0 $DIR$NAME.4.jpg $DIR$NAME.8.jpg
+kaleidoscopic -m image -o 90 -i $DIR$NAME.00.jpg $DIR$NAME.08.jpg
+kaleidoscopic -m image -o 180 -i $DIR$NAME.01.jpg $DIR$NAME.09.jpg
+kaleidoscopic -m image -o 0 $DIR$NAME.04.jpg $DIR$NAME.10.jpg
 
 echo 'Caleidoscopio acaleidoscopeado terminado...'
 echo 'Recordar mover las imagenes que se deseen guardar a otro directorio... estas son temporales'
