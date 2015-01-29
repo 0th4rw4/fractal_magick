@@ -3,13 +3,41 @@ Es un script sencillo y basico, que nacio como practica introductoria para escri
 Usa la libreria Image Magick y los efectos usados son los pueblicados en el sitio [http://www.fmwconcepts.com/imagemagick/](http://www.fmwconcepts.com/imagemagick/)
 
 ## Modo de uso:
-*fractalmagick 'URL' nombreArchivo*
+Ejecutar 
 
-Donde la URL tiene que ser una imagen en jpg y **debe estar entre comillas**. El segundo parametro es el nombre que recive el archivo cuando se descarga... 
+*fractalmagick*
 
-Si uno usa el mismo nombre que un archivo existente, estos archivos se sobre escriben (bug)
+o su alternativa
+
+*fractalmagick NombreArchivo*
+
+
+Donde NombreArchivo es el nombre que recive el archivo cuando se genera la imagen... 
+
+El programa te consulta por 2 opciones 1) Internet y 2) Local.
+La opcion 1 recive una la URL de una imagen de internet, la descarga y la procesa. En cambio la opcion 2 recive la direccion de una imagen dentro de la computadora. Copia la imagen en un nuevo directorio y la procesa
+
+--------
+
+Si uno usa el mismo nombre que un archivo existente, estos archivos se sobre escriben (bug ?)
 
 Por lo tanto si tengo la foto, "fulano" conviene y se aconseja usar el nombre "fulano0" y para la siguiente "fulano1" y a si sucesivamente.
+
+## Instalacion
+
+Descargar el .zip desde [AQUI](https://github.com/0th4rw4/fractal_magick/archive/master.zip), descomprimirlo y por linea de comandos ejectuar lo siguiente
+
+*cd ruta/de/la/carpeta/*
+*./fractalmagick.install*
+
+Se le va a solicitar la contraseña de usurio administrador para instalar las
+
+**Dependencias:**
+ - imagemagick
+ - ristretto
+
+
+
 
 ## Efectos Disponibles
 
@@ -31,3 +59,6 @@ Por lo tanto si tengo la foto, "fulano" conviene y se aconseja usar el nombre "f
  - Hacer comprobaciones existe ristretto? kaleidoscopic? wget?
  - Mejorar instalador ?
  - Tomar deciciones con respecto a los nombres de archivos... para no pisar el mismo archivo, por un tema de coincidencia de nombre
+
+## To Do 2
+ - Hacer un select para procesar cada variante de efecto sobre las imagenes obtenidas ( por cada fractalizacion, diferentes versiones de por ejecemplo pixelize )

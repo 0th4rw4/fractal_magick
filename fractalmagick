@@ -15,13 +15,13 @@
 # Public License along with this program.  If not, see
 # <http://www.gnu.org/licenses/>.
 
-DIR=/tmp/kaleidos/
+DIR=/tmp/fractalmagick/
 #Compruebo que la carpeta no este creada
 # El entrecomillado de $DIR es importante
 # Tambien es importante el espacion entre el if y el corchete
 if [ ! -d "$DIR" ]; then
   mkdir $DIR
-  ln -s $DIR ~/kaleidos
+  ln -s $DIR ~/fractalmagick
 fi
 
 #Compruebo que la variable no exista

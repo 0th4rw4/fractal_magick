@@ -16,31 +16,31 @@
 # <http://www.gnu.org/licenses/>.
 
 echo 'Instalando Efectos para Fractal Magick'
-echo 'ejecute como sudo'
+echo 'es necesario ejecutar como Super Usuario'
 
-apt-get install -y imagemagick ristretto
+sudo apt-get install -y imagemagick ristretto
 
-cp --force ./effects/kaleidoscopic /usr/local/bin/
-cp --force ./effects/pixelize /usr/local/bin/
-cp --force ./effects/recursion /usr/local/bin/
-cp --force ./effects/vintage2 /usr/local/bin/
-cp --force ./effects/thermography /usr/local/bin/
-cp --force ./effects/kmeans /usr/local/bin/
-cp --force ./effects/stutter /usr/local/bin/
+sudo cp --force ./effects/kaleidoscopic /usr/local/bin/
+sudo cp --force ./effects/pixelize /usr/local/bin/
+sudo cp --force ./effects/recursion /usr/local/bin/
+sudo cp --force ./effects/vintage2 /usr/local/bin/
+sudo cp --force ./effects/thermography /usr/local/bin/
+sudo cp --force ./effects/kmeans /usr/local/bin/
+sudo cp --force ./effects/stutter /usr/local/bin/
 
-chmod 755 /usr/local/bin/kaleidoscopic
-chmod 755 /usr/local/bin/pixelize
-chmod 755 /usr/local/bin/recursion
-chmod 755 /usr/local/bin/vintage2
-chmod 755 /usr/local/bin/thermography
-chmod 755 /usr/local/bin/kmeans
-chmod 755 /usr/local/bin/stutter
+sudo chmod 755 /usr/local/bin/kaleidoscopic
+sudo chmod 755 /usr/local/bin/pixelize
+sudo chmod 755 /usr/local/bin/recursion
+sudo chmod 755 /usr/local/bin/vintage2
+sudo chmod 755 /usr/local/bin/thermography
+sudo chmod 755 /usr/local/bin/kmeans
+sudo chmod 755 /usr/local/bin/stutter
 
 echo ' '
 echo 'Instalando Fractal Magick'
 
-cp --force ./fractalmagick /usr/local/bin/
-chmod 755 /usr/local/bin/fractalmagick
+sudo  cp --force ./fractalmagick /usr/local/bin/
+sudo chmod 755 /usr/local/bin/fractalmagick
 
 echo ' '
 echo 'fractalmagick instalado con exito'
