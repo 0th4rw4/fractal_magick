@@ -42,5 +42,13 @@ echo 'Instalando Fractal Magick'
 sudo  cp --force ./fractalmagick /usr/local/bin/
 sudo chmod 755 /usr/local/bin/fractalmagick
 
+# Crear carpeta por primer vez
+DIR=/tmp/fractalmagick/
+
+if [ ! -d "$DIR" ]; then
+  mkdir $DIR
+  ln -s $DIR ~/fractalmagick
+fi
+
 echo ' '
 echo 'fractalmagick instalado con exito'
