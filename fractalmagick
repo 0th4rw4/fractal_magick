@@ -24,23 +24,40 @@ if [ ! -d "$DIR" ]; then
   ln -s $DIR ~/kaleidos
 fi
 
-#Compruebo que se alla ingresado una URL
-if [ ! $1 ]; then
-  echo 'Ingrese una url para descargar'
-  read URL
-else
-  URL=$1
-fi
-
 #Compruebo que la variable no exista
-if [ ! $2 ]; then
+if [ ! $1 ]; then
   echo 'Como se llamara el archivo ?'
   read NAME
 else
-  NAME=$2
+  NAME=$1
 fi
 
-wget -q -N $URL -O $DIR$NAME.jpg
+#Compruebo que se alla ingresado una URL
+echo 'Cual es el origen de la imagen';
+OPTIONS="Internet Local";
+select opt in $OPTIONS; do
+  case $opt in
+    Internet)
+      echo 'Ingrese url para descargar';
+      read URL;
+      wget -q -N $URL -O $DIR$NAME.jpg
+      break
+      ;;
+    Local)
+      echo 'Ingrese ruta de la imagen'
+      read IMAGE
+      cp --force $IMAGE $DIR$NAME.jpg
+      break
+      ;;
+    *)
+      echo 'Elija una opcion'
+      ;;
+  esac
+done
+
+
+
+
 kaleidoscopic -m image -o 0 $DIR$NAME.jpg $DIR$NAME.00.jpg
 kaleidoscopic -m image -o 90 $DIR$NAME.jpg $DIR$NAME.01.jpg
 kaleidoscopic -m image -o 180 $DIR$NAME.jpg $DIR$NAME.02.jpg
