@@ -1,19 +1,52 @@
-### Pasos para reproducir el error
- * Describir el contexto. 
-¿Donde hiciste click?, ¿Que comando ejecutaste? ¿Cual fue el entorno produccion o pruebas? 
- * Bajo que situacion
- ¿Es un usuario nuevo? ¿Como te ingresaste al sistema? 
-  
- * Datos utiles
-  - URL o comando ejecutado
-  - Las capturas de pantalla ayudan a ilustrar, pero no son la mejor fuente de informacion.
-  
-### Resultado esperado
- * ¿Que esperabas que realizara el sistema?
- * ¿Que es deveria hacer la aplicacion cuando llegaste al problema?
- * ¿Cuales son los ultimos pasos que lograste realizar antes de llegar al conflicto?
+### `[etiqueta]` Titulo descriptivo
+ > Autor: @persona
+
+ _Resumen detallado_
+
+
+### **Pasos para reproducir el problema:**
+ _`importante`_
+ _Redacta las acciones para encontrar el problema, y el contexto donde ocurre._
+ _¿Que necesito para reproducir el error?_ 
  
-### Comportamiento actual
- * ¿Que es lo que hace el sistema ahora en consecuencia? 
- * Detalla todo lo que el sistema hace, que vos no queres que haga, o que no esperas que haga.
+ 1\. Inicio A
+ 2\. Paso B
+ 3\. Paso C
+
+
+### **Comportamiento esperado:**
+
+ _Describir el resultado pretendido_
+
+
+### **Comportamiento actual:**
+
+ _Describir la respuesta obtenida. ¿Que hace ahora?_
+
+
+### **Capturas, registros o información adicional**
+
+ ```
+  Imágenes: ![Descripción]( url )
+ ```
+ > _Para subir archivos se puede usar [teknik](https://upload.teknik.io)_
+
+ ```
+  Links: [Nombre]( url )
+ ```
+
+ ```
+  Bloques de texto: (```)
+ ```
+
+### **Posibles pruebas:**
+
+ - [ ] Acción A
+ - [ ] Acción B
+
+### **Posible solución**
+
+ [...]
  
+ 
+--------
